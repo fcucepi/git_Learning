@@ -1,0 +1,210 @@
+{
+  "backup": {
+    "database": {
+      "cronExpression": "0 02 * * *",
+      "enabled": true,
+      "keepLastAmount": 14
+    }
+  },
+  "ffmpeg": {
+    "accel": "disabled",
+    "accelDecode": false,
+    "acceptedAudioCodecs": [
+      "aac",
+      "mp3",
+      "libopus",
+      "pcm_s16le"
+    ],
+    "acceptedContainers": [
+      "mov",
+      "ogg",
+      "webm"
+    ],
+    "acceptedVideoCodecs": [
+      "h264"
+    ],
+    "bframes": -1,
+    "cqMode": "auto",
+    "crf": 23,
+    "gopSize": 0,
+    "maxBitrate": "0",
+    "preferredHwDevice": "auto",
+    "preset": "ultrafast",
+    "refs": 0,
+    "targetAudioCodec": "aac",
+    "targetResolution": "720",
+    "targetVideoCodec": "h264",
+    "temporalAQ": false,
+    "threads": 0,
+    "tonemap": "hable",
+    "transcode": "required",
+    "twoPass": false
+  },
+  "image": {
+    "colorspace": "p3",
+    "extractEmbedded": false,
+    "fullsize": {
+      "enabled": false,
+      "format": "jpeg",
+      "quality": 80
+    },
+    "preview": {
+      "format": "jpeg",
+      "quality": 80,
+      "size": 1440
+    },
+    "thumbnail": {
+      "format": "webp",
+      "quality": 80,
+      "size": 250
+    }
+  },
+  "job": {
+    "backgroundTask": {
+      "concurrency": 20
+    },
+    "faceDetection": {
+      "concurrency": 20
+    },
+    "library": {
+      "concurrency": 20
+    },
+    "metadataExtraction": {
+      "concurrency": 20
+    },
+    "migration": {
+      "concurrency": 20
+    },
+    "notifications": {
+      "concurrency": 20
+    },
+    "search": {
+      "concurrency": 20
+    },
+    "sidecar": {
+      "concurrency": 20
+    },
+    "smartSearch": {
+      "concurrency": 20
+    },
+    "thumbnailGeneration": {
+      "concurrency": 20
+    },
+    "videoConversion": {
+      "concurrency": 20
+    }
+  },
+  "library": {
+    "scan": {
+      "cronExpression": "0 0 * * *",
+      "enabled": true
+    },
+    "watch": {
+      "enabled": true
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "level": "log"
+  },
+  "machineLearning": {
+    "clip": {
+      "enabled": true,
+      "modelName": "ViT-B-32__openai"
+    },
+    "duplicateDetection": {
+      "enabled": true,
+      "maxDistance": 0.01
+    },
+    "enabled": true,
+    "facialRecognition": {
+      "enabled": true,
+      "maxDistance": 0.5,
+      "minFaces": 3,
+      "minScore": 0.7,
+      "modelName": "buffalo_l"
+    },
+    "urls": [
+      "http://immich-machine-learning:3003"
+    ]
+  },
+  "map": {
+    "darkStyle": "https://tiles.immich.cloud/v1/style/dark.json",
+    "enabled": true,
+    "lightStyle": "https://tiles.immich.cloud/v1/style/light.json"
+  },
+  "metadata": {
+    "faces": {
+      "import": true
+    }
+  },
+  "newVersionCheck": {
+    "enabled": true
+  },
+  "notifications": {
+    "smtp": {
+      "enabled": false,
+      "from": "",
+      "replyTo": "",
+      "transport": {
+        "host": "",
+        "ignoreCert": false,
+        "password": "",
+        "port": 587,
+        "username": ""
+      }
+    }
+  },
+  "oauth": {
+    "autoLaunch": true,
+    "autoRegister": true,
+    "buttonText": "Login with Google",
+    "clientId": "807332564514-nk7q95vtrf93espbs750hp867rkfffaq.apps.googleusercontent.com",
+    "clientSecret": "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",
+    "defaultStorageQuota": 20,
+    "enabled": true,
+    "issuerUrl": "https://accounts.google.com",
+    "mobileOverrideEnabled": true,
+    "mobileRedirectUri": "https://example.immich.app/api/oauth/mobile-redirect",
+    "profileSigningAlgorithm": "none",
+    "scope": "openid email profile",
+    "signingAlgorithm": "RS256",
+    "storageLabelClaim": "preferred_username",
+    "storageQuotaClaim": "immich_quota",
+    "timeout": 30000,
+    "tokenEndpointAuthMethod": "client_secret_post"
+  },
+  "passwordLogin": {
+    "enabled": true
+  },
+  "reverseGeocoding": {
+    "enabled": true
+  },
+  "server": {
+    "externalDomain": "https://immich.jjin24.com",
+    "loginPageMessage": "Welcome to Immich",
+    "publicUsers": true
+  },
+  "storageTemplate": {
+    "enabled": true,
+    "hashVerificationEnabled": true,
+    "template": "{{album}}/{{filename}}"
+  },
+  "templates": {
+    "email": {
+      "albumInviteTemplate": "",
+      "albumUpdateTemplate": "",
+      "welcomeTemplate": ""
+    }
+  },
+  "theme": {
+    "customCss": ""
+  },
+  "trash": {
+    "days": 30,
+    "enabled": true
+  },
+  "user": {
+    "deleteDelay": 7
+  }
+}

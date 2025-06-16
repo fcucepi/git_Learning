@@ -1,7 +1,10 @@
 #!/bin/bash
+echo "*Please make sure you have used superuser to run this script*"
+
 echo "creating folders..."
 mkdir -p /mnt/data/photos/uploads
 mkdir -p /mnt/data/config
+mkdir -p /mnt/data/filebrowser
 
 echo ""
 echo ""
