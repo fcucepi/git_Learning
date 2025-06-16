@@ -7,7 +7,7 @@ services:
   volumes:
    - ${FILE_PATH}/photos/uploads:/usr/src/app/upload
    - ${CONFIG_FILE_PATH}:/immich-config.json:ro
-   - ${EXTERANL_LIB}:/external_lib
+   - ${EXTERANL_LIB}:/external_lib # mount 外部的硬碟
   env_file: 
    - .env
   environment:
@@ -64,8 +64,8 @@ services:
   user: "0:0"
   volumes:
    - ${FILE_PATH}/filebrowser:/srv
-   - ${FILE_PATH}/config/filebrowser.db:/database.db
-   - ${FILE_PATH}/config/settings.json:/.filebrowser.json
+   # - ${FILE_PATH}/config/filebrowser.db:/database.db
+   # - ${FILE_PATH}/config/settings.json:/.filebrowser.json
   ports:
    - "2345:80"
   restart: unless-stopped
